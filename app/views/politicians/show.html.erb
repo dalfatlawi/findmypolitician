@@ -1,0 +1,27 @@
+<p>
+  <strong>Name:</strong>
+  <%= @politician.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @politician.position %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @politician.state %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @politician.party %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @politician.age %>
+</p>
+
+<%= link_to 'Edit', edit_politician_path(@politician) %> |
+<%= link_to 'Back', politicians_path %>
