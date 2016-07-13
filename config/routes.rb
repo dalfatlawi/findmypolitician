@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       root to:"pages#home"
     end
   end
+  
+  post 'politicians/search' => 'politicians#search', as: 'search_politicians'
+  get 'all_politicians_updates:/id' => 'politicians_updates#index', as: 'all_politicians_updates'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

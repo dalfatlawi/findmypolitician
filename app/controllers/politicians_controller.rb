@@ -4,8 +4,14 @@ class PoliticiansController < ApplicationController
   # GET /politicians
   # GET /politicians.json
   def index
-    @politicians = Politician.all
+  @politicians = Politician.all
+    # if params [:search]
+    # @politicians = Politicians.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    # else
+    # @politicians = Politicians.find(:all)
+    # end
   end
+
 
   # GET /politicians/1
   # GET /politicians/1.json
@@ -59,6 +65,12 @@ class PoliticiansController < ApplicationController
       format.html { redirect_to politicians_url, notice: 'Politician was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def search
+    @q = "%#{params[:query]}%"
+    @politicians = Politician.where("name LIKE ?", @q)
+    render 'index'
   end
 
   private
