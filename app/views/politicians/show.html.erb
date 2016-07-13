@@ -1,27 +1,34 @@
+<!DOCTYPE html>
+
+<link type=”text/css” rel=”stylesheet” href=”politicians.css”/>
+<html>
+  <body>
 <p>
-  <strong>Name:</strong>
+  <strong>What's his/her Name?</strong>
   <%= @politician.name %>
 </p>
 
 <p>
-  <strong>Position:</strong>
+  <strong>What's his/her Position?</strong>
   <%= @politician.position %>
 </p>
 
 <p>
-  <strong>State:</strong>
+  <strong>What State does he/she represent?</strong>
   <%= @politician.state %>
 </p>
 
 <p>
-  <strong>Party:</strong>
+  <strong>What Party does he/she belong to?</strong>
   <%= @politician.party %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Age?</stron8g>
   <%= @politician.age %>
 </p>
 
 <%= link_to 'Edit', edit_politician_path(@politician) %> |
 <%= link_to 'Back', politicians_path %>
+</body>
+</html>
