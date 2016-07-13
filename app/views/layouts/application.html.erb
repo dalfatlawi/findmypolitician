@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Find My Politician!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<%= form_tag search_politicians_path do %>
+  <input class="search full-width" id="searchbar" name="query" placeholder="Search Politicians" type="text" autocomplete="off">
+<% end %>
 
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
