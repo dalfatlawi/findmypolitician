@@ -1,0 +1,32 @@
+<body style="background-color: #C0392B">
+  <center><%= image_tag("signup.png", height: '40', width: '160', style: "padding-bottom: 45px; padding-top: 45px;") %></center>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+<center>
+  <font face="Sans-serif" color="white" >
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, :style => "height: 30px;" "width:400px;" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", :style => "height: 30px;" "width:400px;" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", :style => "height: 30px;" "width:400px;" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</font>
+</center>

@@ -9,11 +9,11 @@
   <strong>Description:</strong>
   <%= @legislation.description %>
 </p>
-
+<% unless @legislation.year_passed == 0 %>
 <p>
   <strong>Year passed:</strong>
   <%= @legislation.year_passed %>
 </p>
-
+<% end %>
 <%= link_to 'Edit', edit_legislation_path(@legislation) %> |
 <%= link_to 'Back', legislations_path %>

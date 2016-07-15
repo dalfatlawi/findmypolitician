@@ -2,29 +2,29 @@
 <html>
 <head>
   <title>Find My Politician!</title>
-  <link type=”text/css” rel=”stylesheet” href=”applicatio.css”/>
+  <link type=”text/css” rel=”stylesheet” href=”application.css”/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 </head> 
+
 <body>
   
-<%= form_tag search_politicians_path do %>
-  <input class="search full-width" id="searchbar" name="query" placeholder="Search Politicians" type="text" autocomplete="off">
-<% end %>
-
+<p><font face="verdana" color="white">
 <p class="navbar-text pull-right">
+  <div align="right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-
+  <%= link_to "My Politicians",politicians_path%>
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
- </font>
+</font></p>
 </p>
+</div>
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>

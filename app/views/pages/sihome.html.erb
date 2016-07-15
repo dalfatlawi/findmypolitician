@@ -1,11 +1,22 @@
-  <body style="background-color: #1abc9c">
-       <font size="3" face="verdana" color="white">
-           <center><%= image_tag("SiteLogo.png", height: '350', width: '1069') %></center>
+<DOCTYPE html!>
+    <html>
+        <head>
+            <title>My Politician Homepage</title>
+            <link type=”text/css” rel=”stylesheet” href=”pages.scss”/>
+        </head>
+  <body style="background-color: #fff">
+       <font size="3" face="verdana" color="black">
+           <center><%= image_tag("SiteLogo.png", height: '228', width: '700', style: "padding-bottom: 45px;") %>
+           <%= form_tag search_politicians_path do %>
+  <input class="search full-width" id="searchbar" name="query" placeholder="Enter a Politicians name, or a zipcode that you're interested in." type="text" autocomplete="off" style="font-size: 100%; width: 80%; height: 50px; text-align: center;" >
+<% end %>
+</center>
      <center><h1>Home</h1>
 <p>You are signed in.</p>
 
 <%= link_to "All Politicians",politicians_path%>
 <strong>Favorite Politicians:</strong>
+
 
 
 </center>
