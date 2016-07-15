@@ -30,7 +30,7 @@ l11 = Legislation.create(name: '(Coal Cleanup Taxpayer Act) H.R. 5500', descript
 l12 = Legislation.create(name: '(Recovering Missing Children Act) H.R. 3209', description: 'amends the internal revenue code to allow the disclosure attached returns and return information to officers and employees of state or local law-enforcement agencies who are partnering with federal agencies in order to find a missing or exploited child cases', year_passed: 'nil')
 l13 = Legislation.create(name: '(Voting Rights Advancement Act of 2015) H.R. 2867', description: 'Amends the voting rights act of 1965 to allow a representative official of an Indian tribe to request one or more polling places to be located on tribal lands', year_passed: 'nil')
 l14 = Legislation.create(name: '(Toxic Exposure Research Act of 2016) H.R. 1769', description: 'directs the Department of Veterans Affairs to select a VA medical center to serve as the national Center for research on the diagnosis and treatment of the family of veterans explosive toxins while serving', year_passed: 'nil')
-l15 = Legislation.creaste(name: 'S.3168', description: 'A bill to amend the Elementary and Secondary Education Act of 1965 to establish the Stronger Together Program', year_passed: 'nil')
+l15 = Legislation.create(name: 'S.3168', description: 'A bill to amend the Elementary and Secondary Education Act of 1965 to establish the Stronger Together Program', year_passed: 'nil')
 l16 = Legislation.create(name: '(Comprehensive Addiction and Recovery Act of 2016) S.524', description: 'authorizes the Attorney General and Secretary of Health and Human Services to award grants to address the national epidemics of prescription opioid abuse and heroin use, and to provide for the establishment of an inter-agency task force to review, modify, and update best practices for pain management and prescribing pain medication, and for other purposes', year_passed: 'nil')
 l17 = Legislation.create(name: 'S.Con.Res.45', description: 'A concurrent resolution expressing the sense of Congress relating to the disapproval of certain activities of certain companies, trade associations, foundations, and organizations.
 S.3148- A bill to establish the John F. Kennedy Centennial Commission', year_passed: 'nil')
@@ -43,4 +43,31 @@ l23 = Legislation.create(name: 'H.Res.795', description: 'recognizes the 70th an
 l24 = Legislation.create(name: '(Foreign ID Review Act of 2016) H.R. 5446', description: 'requires the Attorney General to review foreign forms of identification, including consular identification cards and foreign passports without a valid visa, to establish a valid and secure form of identification, and for other purposes', year_passed: 'nil')
 l25 = Legislation.create(name: 'H.Res.789', description: 'condemning the horrific acts of terrorism and hatred in Orlando, Florida on June 12, 2016, and expressing support and prayers for all of those impacted by the tragedy
 ', year_passed: 'nil')
+
+p1.legislations << l1
+p1.legislations << l2
+p1.legislations << l3
+p1.legislations << l4
+p1.legislations << l5
+p1.legislations << l6
+p2.legislations << l7
+p2.legislations << l8
+p2.legislations << l9
+p2.legislations << l10
+p2.legislations << l11
+p2.legislations << l12
+p3.legislations << l13
+p3.legislations << l14
+p3.legislations << l15
+p4.legislations << l16
+p4.legislations << l17
+p4.legislations << l18
+p4.legislations << l19
+p4.legislations << l20
+p5.legislations << l21
+p5.legislations << l22
+p5.legislations << l23
+p5.legislations << l24
+p5.legislations << l25
+
 
