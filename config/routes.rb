@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :legislations
   get 'pages/home'
   post 'politicians/search' => 'politicians#search', as: 'search_politicians'
 
