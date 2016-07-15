@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @legislation.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @legislation.description %>
+</p>
+
+<p>
+  <strong>Year passed:</strong>
+  <%= @legislation.year_passed %>
+</p>
+
+<%= link_to 'Edit', edit_legislation_path(@legislation) %> |
+<%= link_to 'Back', legislations_path %>
