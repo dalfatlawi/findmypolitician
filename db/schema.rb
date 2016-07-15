@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703230637) do
+ActiveRecord::Schema.define(version: 20160715004333) do
+
+  create_table "favorite_relationships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "politician_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "favorite_relationships", ["politician_id"], name: "index_favorite_relationships_on_politician_id"
+  add_index "favorite_relationships", ["user_id"], name: "index_favorite_relationships_on_user_id"
+
+  create_table "legislations", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "year_passed"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "legislative_relationships", force: :cascade do |t|
+    t.integer  "legislation_id"
+    t.integer  "politician_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "legislative_relationships", ["legislation_id"], name: "index_legislative_relationships_on_legislation_id"
+  add_index "legislative_relationships", ["politician_id"], name: "index_legislative_relationships_on_politician_id"
 
   create_table "politicians", force: :cascade do |t|
     t.string   "name"
