@@ -1,0 +1,7 @@
+<div>
+    <% if current_user.politicians.include?(@politician) %>
+        <%= render "unfave" %>
+    <% else %>
+        <%= render "fave" %>
+    <% end %>
+</div>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :legislations
-  get 'pages/home'
+  get 'pages/home' => 'pages#home'
 
   resources :politicians
+  resources :favorite_relationships,  only: [:create, :destroy]
   devise_for :users
   devise_scope :user do
     authenticated :user do

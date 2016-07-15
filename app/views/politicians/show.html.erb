@@ -18,14 +18,23 @@
   <%= @politician.state %>
 </p>
 
+
+<div><%= render "fave_form" if user_signed_in? %></div>
+
+
 <p>
   <strong>What Party does he/she belong to?</strong>
   <%= @politician.party %>
 </p>
 
 <p>
-  <strong>Age?</stron8g>
+  <strong>Age?</strong>
   <%= @politician.age %>
+</p>
+
+<p>
+  <strong>List of Legislations</strong>
+  <%= @politician.legislations %>
 </p>
 
 <%= link_to 'Edit', edit_politician_path(@politician) %> |
