@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/home'
+  post 'politicians/search' => 'politicians#search', as: 'search_politicians'
 
   resources :politicians
   devise_for :users
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
     end
   end
   
-  post 'politicians/search' => 'politicians#search', as: 'search_politicians'
   get 'all_politicians_updates:/id' => 'politicians_updates#index', as: 'all_politicians_updates'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
